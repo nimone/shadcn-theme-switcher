@@ -1,0 +1,70 @@
+{
+	"name": "shadcn-theme-switcher",
+	"version": "0.1.0",
+	"description": "A flexible theme switcher component for shadcn/ui with support for light/dark mode and multiple color themes",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.mts"
+		},
+		"./themes": {
+			"import": "./dist/themes/index.mjs",
+			"types": "./dist/themes/index.d.mts"
+		},
+		"./themes.css": {
+			"import": "./dist/themes/index.css"
+		}
+	},
+	"keywords": [
+		"react",
+		"theme-switcher",
+		"shadcn",
+		"tailwindcss",
+		"dark-mode",
+		"light-mode",
+		"themes",
+		"ui"
+	],
+	"author": "Nishant Mogha",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nimone/shadcn-theme-switcher.git"
+	},
+	"homepage": "https://github.com/nimone/shadcn-theme-switcher#readme",
+	"bugs": {
+		"url": "https://github.com/nimone/shadcn-theme-switcher/issues"
+	},
+	"scripts": {
+		"build": "tsdown && npm run build:css",
+		"build:css": "npx @tailwindcss/cli -i ./src/index.css -o ./dist/index.css",
+		"dev": "tsdown --watch & npm run build:css -- --watch"
+	},
+	"dependencies": {
+		"@radix-ui/react-select": "^2.2.6",
+		"lucide-react": "^0.562.0"
+	},
+	"peerDependencies": {
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"react": "^18.0.0 || ^19.0.0",
+		"react-dom": "^18.0.0 || ^19.0.0",
+		"tailwind-merge": "^3.3.1",
+		"tailwindcss": "^3.0.0 || ^4.0.0"
+	},
+	"devDependencies": {
+		"@bosh-code/tsdown-plugin-inject-css": "^2.0.0",
+		"@tailwindcss/cli": "^4.1.18",
+		"@types/react": "^19.2.7",
+		"@types/react-dom": "^19.2.3",
+		"tsdown": "^0.18.4",
+		"typescript": "^5.9.3"
+	}
+}
