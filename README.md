@@ -737,6 +737,7 @@ MIT © [Nishant Mogha](https://github.com/nimone)
 ## Credits
 
 Built with:
+- [tweakcn Themes](https://github.com/jnsahaj/tweakcn)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Radix UI](https://www.radix-ui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
